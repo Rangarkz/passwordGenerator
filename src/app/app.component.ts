@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'passwordGenerator';
+
+  generatedPassword = '';
+
+  onButtonClick(){
+    this.generatedPassword="generated password";
+  }
+  
 }
