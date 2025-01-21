@@ -8,6 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'passwordGenerator';
 
+  useLetters = false;
+  useNumbers = false;
+  useSymbols = false;
+
+  changeUseLetters(){
+    this.useLetters = !this.useLetters;
+  }
+  changeUseNumbers(){
+    this.useNumbers = !this.useNumbers;
+  }
+  changeUseSymbols(){
+    this.useSymbols = !this.useSymbols;
+  }
+
   generatedPassword = '';
 
   onButtonClick(){
