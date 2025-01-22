@@ -31,9 +31,11 @@
 <div class="field">
   <button class="button is-link is-fullwidth" [disabled]="!(passwordLength && (useLetters || useNumbers || useSymbols))" (click)="generate()">Generate</button>
 </div>
-<div class="field">
+<div class="field" *ngIf="generatedPassword">
 
-  <label class="tag">Your Password : {{generatedPassword}}</label>
+  <label class="tag has-addons">
+  Your Password : {{generatedPassword}}
+</label>
 </div>
 
     </div>
