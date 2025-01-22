@@ -17,7 +17,7 @@
   <input (change)="changeUseSymbols()" type="checkbox">
 </div>
 <div>
-  <button [disabled]="!passwordLength" (click)="generate()">Generate</button>
+  <button [disabled]="!passwordLength && !(useLetters || useNumbers || useSymbols)" (click)="generate()">Generate</button>
 </div>
 <div>
   <p>Your Password : {{generatedPassword}}</p>
